@@ -15,31 +15,44 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            // Zmieniamy ikonę hamburgera
             const icon = hamburger.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
                 icon.classList.toggle('fa-times');
             }
-            
-            // Aktualizujemy atrybut aria-expanded
             const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
             hamburger.setAttribute('aria-expanded', !expanded);
+            // Blokuj przewijanie strony, gdy menu jest otwarte
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
         });
         
         // Zamknij menu po kliknięciu linku
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                
                 const icon = hamburger.querySelector('i');
                 if (icon) {
                     icon.classList.add('fa-bars');
                     icon.classList.remove('fa-times');
                 }
-                
                 hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = 'auto'; // Przywraca przewijanie
             });
+        });
+
+        // Zamknij menu po kliknięciu poza nim
+        document.addEventListener('click', (e) => {
+            const isClickInsideNav = navLinks.contains(e.target) || hamburger.contains(e.target);
+            if (!isClickInsideNav && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = 'auto'; // Przywraca przewijanie
+            }
         });
     }
 
