@@ -1,0 +1,38 @@
+/* Reset i podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Zmienne */
+  :root {
+    --primary-color: #00d4ff;
+    --secondary-color: #007bff;
+    --dark-bg: #1a1a1a;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --transition-standard: all 0.3s ease;
+    --shadow-standard: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Globalne style */
+  body {
+    color: var(--text-color);
+    background: #fff;
+    transition: var(--transition-standard);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Tryb ciemny - podstawowe style */
+  body.dark {
+    background: #1a1a1a;
+    color: #f4f4f4;
+  }

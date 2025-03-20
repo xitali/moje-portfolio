@@ -1,0 +1,219 @@
+/* Responsywność */
+@media (max-width: 1024px) {
+    .nav-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo-container {
+      padding-left: 1rem;
+    }
+  
+    .logo {
+      height: 45px; /* Slightly smaller for tablets */
+    }
+  
+    .logo-text {
+      font-size: 1.3rem; /* Slightly smaller text */
+    }
+  
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      background: #1a1a1a;
+      border-top: 1px solid #333;
+    }
+  
+    .nav-links li {
+      margin: 1rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+      padding-right: 1rem;
+    }
+  
+    .hero-content h2 {
+      font-size: 3rem;
+    }
+  
+    .quick-links .container {
+      justify-content: center;
+    }
+  
+    .link-box {
+      flex: 0 0 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo-container {
+      padding-left: 1rem;
+    }
+  
+    .logo {
+      height: 40px; /* Slightly smaller for tablets */
+    }
+  
+    .logo-text {
+      font-size: 1.2rem; /* Slightly smaller text */
+    }
+  
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      background: #1a1a1a;
+      border-top: 1px solid #333;
+    }
+  
+    .nav-links li {
+      margin: 1rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+      padding-right: 1rem;
+    }
+  
+    .hero {
+      padding: 5rem 0;
+    }
+  
+    .hero-content h2 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  
+    .btn {
+      padding: 0.8rem 2rem;
+    }
+  
+    .link-box {
+      flex: 0 0 100%;
+      margin: 1rem 0;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      text-align: center;
+      padding: 1.5rem;
+    }
+  
+    .profile-img {
+      width: 250px;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo-container {
+      padding-left: 1rem;
+    }
+  
+    .logo {
+      height: 35px; /* Even smaller for mobile */
+    }
+  
+    .logo-text {
+      display: none; /* Hide the text on mobile to save space */
+    }
+  
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      background: #1a1a1a;
+      border-top: 1px solid #333;
+    }
+  
+    .nav-links li {
+      margin: 1rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+      padding-right: 1rem;
+    }
+  
+    .hero {
+      padding: 3rem 0;
+    }
+  
+    .hero-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.9rem;
+    }
+  
+    section {
+      padding: 4rem 0;
+    }
+  
+    .project-card h3 {
+      font-size: 1.3rem;
+    }
+  
+    .btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      padding: 1rem;
+    }
+  }
