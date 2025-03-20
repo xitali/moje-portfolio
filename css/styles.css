@@ -766,6 +766,12 @@ body.dark .contact-form textarea {
         margin: 1rem 0;
     }
 
+    /* Pokaż ikonę hamburgera na mniejszych ekranach */
+    .hamburger {
+        display: block;
+        padding-right: 1rem;
+    }
+
     .hero {
         padding: 5rem 0;
     }
